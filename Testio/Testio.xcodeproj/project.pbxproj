@@ -38,6 +38,8 @@
 		43E357992A24E70A00E59A37 /* OfferCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E357982A24E70A00E59A37 /* OfferCollectionViewCell.swift */; };
 		43E3579B2A25090E00E59A37 /* BatteryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E3579A2A25090E00E59A37 /* BatteryViewController.swift */; };
 		43E3579E2A25092300E59A37 /* BatteryVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E3579D2A25092300E59A37 /* BatteryVM.swift */; };
+		43E357A12A250AD500E59A37 /* DeviceKit in Frameworks */ = {isa = PBXBuildFile; productRef = 43E357A02A250AD500E59A37 /* DeviceKit */; };
+		43E357A32A25144D00E59A37 /* BatteryInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E357A22A25144D00E59A37 /* BatteryInfoView.swift */; };
 		43FEC8602A2093BD00EB923A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FEC85F2A2093BD00EB923A /* AppDelegate.swift */; };
 		43FEC8622A2093BD00EB923A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FEC8612A2093BD00EB923A /* SceneDelegate.swift */; };
 		43FEC8642A2093BD00EB923A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FEC8632A2093BD00EB923A /* ViewController.swift */; };
@@ -67,6 +69,7 @@
 		43E357982A24E70A00E59A37 /* OfferCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferCollectionViewCell.swift; sourceTree = "<group>"; };
 		43E3579A2A25090E00E59A37 /* BatteryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BatteryViewController.swift; sourceTree = "<group>"; };
 		43E3579D2A25092300E59A37 /* BatteryVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BatteryVM.swift; sourceTree = "<group>"; };
+		43E357A22A25144D00E59A37 /* BatteryInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BatteryInfoView.swift; sourceTree = "<group>"; };
 		43FEC85C2A2093BD00EB923A /* Testio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Testio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		43FEC85F2A2093BD00EB923A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		43FEC8612A2093BD00EB923A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -85,6 +88,7 @@
 				43E3577C2A211B3B00E59A37 /* Then in Frameworks */,
 				43E357552A209D7000E59A37 /* RxCocoa in Frameworks */,
 				43E3575E2A209D9000E59A37 /* RealmSwift in Frameworks */,
+				43E357A12A250AD500E59A37 /* DeviceKit in Frameworks */,
 				43E357502A209D6100E59A37 /* SnapKit in Frameworks */,
 				43E357592A209D7000E59A37 /* RxSwift in Frameworks */,
 				43E357752A20EE4300E59A37 /* RxDataSources in Frameworks */,
@@ -181,6 +185,7 @@
 			children = (
 				43E3579A2A25090E00E59A37 /* BatteryViewController.swift */,
 				43E3579D2A25092300E59A37 /* BatteryVM.swift */,
+				43E357A22A25144D00E59A37 /* BatteryInfoView.swift */,
 			);
 			path = Battery;
 			sourceTree = "<group>";
@@ -246,6 +251,7 @@
 				43E357742A20EE4300E59A37 /* RxDataSources */,
 				43E3577B2A211B3B00E59A37 /* Then */,
 				43E357862A23874A00E59A37 /* Reachability */,
+				43E357A02A250AD500E59A37 /* DeviceKit */,
 			);
 			productName = Testio;
 			productReference = 43FEC85C2A2093BD00EB923A /* Testio.app */;
@@ -282,6 +288,7 @@
 				43E357732A20EE4300E59A37 /* XCRemoteSwiftPackageReference "RxDataSources" */,
 				43E3577A2A211B3B00E59A37 /* XCRemoteSwiftPackageReference "Then" */,
 				43E357852A23874A00E59A37 /* XCRemoteSwiftPackageReference "Reachability" */,
+				43E3579F2A250AD500E59A37 /* XCRemoteSwiftPackageReference "DeviceKit" */,
 			);
 			productRefGroup = 43FEC85D2A2093BD00EB923A /* Products */;
 			projectDirPath = "";
@@ -316,6 +323,7 @@
 				43FEC8642A2093BD00EB923A /* ViewController.swift in Sources */,
 				43E3577E2A2123D300E59A37 /* Observable + Ext.swift in Sources */,
 				43E357722A20ECA800E59A37 /* TestsViewController.swift in Sources */,
+				43E357A32A25144D00E59A37 /* BatteryInfoView.swift in Sources */,
 				43E357892A2388B000E59A37 /* UIScreen + Ext.swift in Sources */,
 				43E3579E2A25092300E59A37 /* BatteryVM.swift in Sources */,
 				43E357772A20EEAB00E59A37 /* TestsViewModel.swift in Sources */,
@@ -602,6 +610,14 @@
 				kind = branch;
 			};
 		};
+		43E3579F2A250AD500E59A37 /* XCRemoteSwiftPackageReference "DeviceKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/devicekit/DeviceKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -654,6 +670,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 43E357852A23874A00E59A37 /* XCRemoteSwiftPackageReference "Reachability" */;
 			productName = Reachability;
+		};
+		43E357A02A250AD500E59A37 /* DeviceKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 43E3579F2A250AD500E59A37 /* XCRemoteSwiftPackageReference "DeviceKit" */;
+			productName = DeviceKit;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

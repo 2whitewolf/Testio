@@ -22,21 +22,21 @@ class TabBarViewController: UITabBarController {
     func setupVCs() {
         viewControllers = [
             //               createNavController(for: TestsViewController(), image: UIImage(systemName: "magnifyingglass")!),
-            createNavController(for: TestsViewController(), image: UIImage(named: "list")!),
-            createNavController(for: ViewController(),image: UIImage(named: "battery")!)
+            createNavController(for: TestsViewController(),title: "Test list", image: UIImage(named: "list")!),
+            createNavController(for: BatteryViewController(),title: "Battery" , image: UIImage(named: "battery")!)
         ]
         
         
     }
     
     fileprivate func createNavController(for rootViewController: UIViewController,
-                                         //                                                      title: String,
+                                                                                               title: String,
                                          image: UIImage) -> UIViewController {
         let navController = UINavigationController(rootViewController: rootViewController)
         navController.tabBarItem.title = title
         navController.tabBarItem.image = image
         //            navController.navigationBar.prefersLargeTitles = true
-        //            rootViewController.navigationItem.title = title
+//                    rootViewController.navigationItem.title = title
         return navController
     }
     
