@@ -144,10 +144,8 @@
 		43E3576F2A20EC4F00E59A37 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				43E357A42A251A5200E59A37 /* TestList */,
 				43E3578F2A23A8D000E59A37 /* Test */,
-				43E357712A20ECA800E59A37 /* TestsViewController.swift */,
-				43E357762A20EEAB00E59A37 /* TestsViewModel.swift */,
-				43E357782A211A4800E59A37 /* SelectionListCell.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -188,6 +186,16 @@
 				43E357A22A25144D00E59A37 /* BatteryInfoView.swift */,
 			);
 			path = Battery;
+			sourceTree = "<group>";
+		};
+		43E357A42A251A5200E59A37 /* TestList */ = {
+			isa = PBXGroup;
+			children = (
+				43E357782A211A4800E59A37 /* SelectionListCell.swift */,
+				43E357762A20EEAB00E59A37 /* TestsViewModel.swift */,
+				43E357712A20ECA800E59A37 /* TestsViewController.swift */,
+			);
+			path = TestList;
 			sourceTree = "<group>";
 		};
 		43FEC8532A2093BD00EB923A = {

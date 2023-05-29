@@ -78,6 +78,14 @@ class TestsViewController: UIViewController {
             .modelSelected(RegularSectionItem.self)
             .asDriver()
         
+//        selectedModel.do(onNext: {
+//            collectionView.rx.modelDeselected($0)
+//        })
+//            .drive()
+//            .disposed(by: disposeBag)
+        
+
+        
         let dataSource = makeDataSource()
         
         

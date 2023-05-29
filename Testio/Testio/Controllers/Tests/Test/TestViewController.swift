@@ -21,6 +21,9 @@ class TestViewController: UIViewController {
     private lazy  var titleLabel = UILabel().then { label in
         label.textColor = .black
         label.font = .systemFont(ofSize: 20, weight: .regular)
+        label.numberOfLines = 0
+        label.lineBreakMode = .byWordWrapping
+        label.textAlignment = .center
     }
     
     private lazy var closeButton = UIButton().then{ button in
@@ -88,7 +91,7 @@ class TestViewController: UIViewController {
         testImage.image = test.test.image
         
         titleLabel.snp.makeConstraints { make in
-            make.centerX.equalToSuperview()
+            make.leading.trailing.equalToSuperview().inset(12)
             make.top.equalToSuperview().inset(UIScreen.screenHeight * 0.23)
         }
         

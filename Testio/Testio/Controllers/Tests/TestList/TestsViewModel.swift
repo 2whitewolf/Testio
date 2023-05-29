@@ -118,6 +118,9 @@ class TestsViewModel {
 //            .flatMap{ id -> TestVM? in
 //                
 //            }
+        
+        
+        
         let model = Driver.combineLatest(tests.asDriver(onErrorJustReturn: []), selectedId) { models, selectedId -> TestVM? in
             
             let model = models.first(where: { $0.model.id == selectedId })
@@ -126,6 +129,7 @@ class TestsViewModel {
             }
             return model
         }
+            .distinctUntilChanged()
         
         return  Output(sections: sections.asDriver(onErrorJustReturn: []), nextPage: model)
         
@@ -163,4 +167,16 @@ fileprivate var defaultTests:[TestModel] = [
 struct TestVM{
     var model: TestModel
     let selected: BehaviorRelay<Bool>
+}
+extension TestVM: Equatable{
+    static func == (lhs: TestVM, rhs: TestVM) -> Bool {
+      if let statusLHS = lhs as? TestVM,
+         let statusRHS = rhs as? TestVM {
+       
+          return statusLHS.model.id == statusRHS.model.id
+          
+      }
+        
+        return false
+    }
 }

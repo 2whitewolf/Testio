@@ -13,7 +13,7 @@ import UIKit
 import AVFoundation
 
 class TestViewModel {
-    let test: TestModel
+    var test: TestModel
     
     
     init(test: TestModel) {
@@ -47,6 +47,7 @@ class TestViewModel {
         Observable.combineLatest(testsFromRealm, input.selectedModel.asObservable())
             .flatMapLatest{ tests, selected -> Single<Void> in
                 if tests.contains(where: { $0.id == selected.id}) {
+                    
                     return   updateTest(model: TestModel(id: selected.id, test: selected.test, opened: true, passed: selected.passed))
                 }
                 return .just(())
@@ -105,7 +106,8 @@ class TestViewModel {
                 
                 func testGPS() {
                     Connection.default.testGPS(completion: {  (result, _) in
-                        updateTest(model: TestModel(id: self.test.id, test: self.test.test, opened: self.test.opened, passed: result ?? false))
+                        print(result)
+                        updateTest(model: TestModel(id: self.test.id, test: self.test.test, opened: true, passed: result ?? false))
                             .subscribe()
                             .disposed(by: disposeBag)
                         action.accept(true)
@@ -125,7 +127,9 @@ class TestViewModel {
                 
                 func testMicrophone() {
                     Sound.default.test(type: .microphone, completion: { (result, _) in
-                        updateTest(model: TestModel(id: self.test.id, test: self.test.test, opened: self.test.opened, passed: result ?? false))
+                        print(result)
+
+                        updateTest(model: TestModel(id: self.test.id, test: self.test.test, opened: true, passed: result ?? false))
                             .subscribe()
                             .disposed(by: disposeBag)
                         action.accept(true)
