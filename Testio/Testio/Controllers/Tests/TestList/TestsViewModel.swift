@@ -62,7 +62,7 @@ class TestsViewModel {
                 
                 
                 
-                let tests = Observable.combineLatest(testsFromRealm.asObservable().distinctUntilChanged(), input.viewWillAppearTrigger.asObservable()){ tests, _ -> [TestVM] in
+                let tests = Observable.combineLatest(testsFromRealm.asObservable(), input.viewWillAppearTrigger.asObservable()){ tests, _ -> [TestVM] in
                     if tests.isEmpty {
                         
                         return defaultTests
@@ -173,7 +173,7 @@ extension TestVM: Equatable{
       if let statusLHS = lhs as? TestVM,
          let statusRHS = rhs as? TestVM {
        
-          return statusLHS.model.id == statusRHS.model.id
+          return statusLHS.model.id == statusRHS.model.id //&& statusLHS.model.passed == statusRHS.model.passed  && statusLHS.model.opened == statusRHS.model.opened
           
       }
         
